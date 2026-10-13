@@ -4,16 +4,16 @@
 
 project:
   acronym: DELTA-Hub Support
-  title: "Support activities for consolidating DELTA-Hub: River Delta Science, Education, and Modeling Hub at the University of Bucharest"
-  number: "TODO: project code (e.g. PN-IV-...)"
-  contract: "118PHE/2025"            # TODO: confirm against the signed contract
+  title: "DELTA-Hub: River Delta Science, Education, and Modeling Hub – support activities"
+  number: "PN-IV-P8-8.1-PRE-HE-ORG-2025-0283"
+  contract: "118PHE/2025"
   funder: UEFISCDI
   funder_url: https://uefiscdi.gov.ro
-  programme: "PNCDI IV, Programme 5 – European and International Cooperation, Subprogramme 5.8 – Premiere Orizont Europa – Instituții"  # TODO: confirm
+  programme: "PNCDI IV, Programme 8, Subprogramme 8.1 – Premiere Orizont Europa – Instituții (PN-IV-P8-8.1-PRE-HE-ORG-2025)"
   call: "Premiere Orizont Europa – Instituții"
-  start: "2025"                      # TODO: exact start date
+  start: "July 2025"
   end: "2027"                        # TODO: exact end date
-  duration: "3 years (2025 – 2027)"
+  duration: "July 2025 – 2027 (3 stages)"
 
   budget:
     state: "1,635,600 lei"
@@ -30,7 +30,7 @@ project:
     url: https://unibuc.ro
 
   director:
-    name: "TODO: Project director name"
+    name: "Ion-Florin Tătui"
     email: "TODO@unibuc.ro"
 
   related_project:

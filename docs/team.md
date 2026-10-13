@@ -1,13 +1,26 @@
+---
+title: Team
+---
+
+<div class="page-intro" markdown>
+<span class="eyebrow">Project</span>
+
 # Team
+</div>
 
 ## Project director
 
-**{{ project.director.name }}** – {{ project.coordinator.name }}
-<br>Email: [{{ project.director.email }}](mailto:{{ project.director.email }})
+<div class="person" markdown>
+**{{ project.director.name }}**<br>
+{{ project.coordinator.unit }}, {{ project.coordinator.name }}<br>
+[{{ project.director.email }}](mailto:{{ project.director.email }})
+</div>
 
-## Team members
+## Research team
 
-<!-- Add one row per member. Keep this list up to date (contract art. 6.1.26). -->
+<!-- Keep this list up to date (contract art. 6.1.26). Add one row per member:
+| Name | Role in the project | Affiliation |
+-->
 
 | Name | Role in the project | Affiliation |
 |---|---|---|
@@ -18,14 +31,17 @@
 
 ## Scholarship holders
 
-| Name | Programme | Period |
+| Name | Scholarship | Period |
 |---|---|---|
-| TODO | Master's scholarship | TODO |
+| Răzvan-Laurențiu Dogaru | Hydro-sedimentary modelling | Oct 2025 – Sep 2026 |
+| Otilia Andreea Cotelin | Hydro-ecological modelling | Oct 2025 – Sep 2026 |
+| Andreea Miron | 3D visualisation and VR | Oct 2025 – Sep 2026 |
+| Andrei Șelăvîrtea | Climate analysis | Oct 2025 – Sep 2026 |
 
 ## International Advisory Board
 
-| Name | Institution |
-|---|---|
-| TODO | TU Delft / Deltares (Netherlands) |
-| TODO | Tour du Valat / CEREGE (France) |
-| TODO | Polytechnic University of Catalonia (Spain) |
+Members of the DELTA-Hub International Advisory Board are affiliated with:
+
+- TU Delft / Deltares (Netherlands)
+- Tour du Valat / CEREGE (France)
+- Polytechnic University of Catalonia (Spain)

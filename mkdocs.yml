@@ -2,11 +2,8 @@ site_name: DELTA-Hub Support
 site_url: https://dh-suport.unibuc.ro/
 site_description: UEFISCDI-funded support project for consolidating DELTA-Hub at the University of Bucharest.
 copyright: >
-  Funded by UEFISCDI – Premiere Orizont Europa – Instituții ·
-  University of Bucharest
-
-repo_url: https://github.com/datesfantu-droid/.github.io
-edit_uri: edit/main/docs/
+  Funded by UEFISCDI – Premiere Orizont Europa – Instituții · Contract 118PHE/2025 ·
+  © University of Bucharest
 
 theme:
   name: material
@@ -14,6 +11,9 @@ theme:
   logo: assets/logo.svg
   favicon: assets/logo.svg
   language: en
+  font:
+    text: Inter
+    code: JetBrains Mono
   palette:
     - media: "(prefers-color-scheme: light)"
       scheme: default
@@ -31,9 +31,9 @@ theme:
         name: Switch to light mode
   features:
     - navigation.tabs
+    - navigation.sections
     - navigation.top
     - navigation.footer
-    - content.action.edit
     - toc.follow
     - search.highlight
 
@@ -42,11 +42,14 @@ extra_css:
 
 nav:
   - Home: index.md
-  - Project: project.md
-  - Team: team.md
-  - Reports: reports.md
-  - Results & Impact: results.md
-  - Publications: publications.md
+  - Project:
+      - About: project.md
+      - Team: team.md
+  - Progress:
+      - Reports: reports.md
+      - Results & Impact: results.md
+      - Publications: publications.md
+  - 3D & VR: vr.md
   - Events:
       - events/index.md
   - Contact: contact.md
@@ -56,12 +59,13 @@ plugins:
   - macros:
       include_yaml:
         - data/project.yml
+        - data/models.yml
   - blog:
       blog_dir: events
       blog_toc: true
       post_date_format: long
       post_url_format: "{date}/{slug}"
-      archive: true
+      archive: false
       categories: true
 
 markdown_extensions:

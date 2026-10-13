@@ -1,46 +1,86 @@
 ---
 title: Home
 hide:
+  - navigation
   - toc
 ---
 
-![DELTA-Hub Support logo](assets/logo.svg){ .hero-logo }
+<section class="hero" markdown>
+<span class="eyebrow">UEFISCDI · Premiere Orizont Europa – Instituții</span>
 
 # {{ project.acronym }}
 
-**{{ project.title }}**
+<p class="hero__lead">Strengthening <strong>DELTA-Hub</strong>, the River Delta Science, Education and
+Modeling Hub of the University of Bucharest, through scholarships, international mobilities,
+new research equipment and a scientific visualisation laboratory.</p>
 
-This project strengthens **DELTA-Hub**, the River Delta Science, Education, and Modeling Hub
-hosted by the University of Bucharest, through scholarships, international mobilities, new
-research equipment, and a scientific visualisation and outreach laboratory.
+[Discover the project](project.md){ .md-button .md-button--primary }
+[Explore 3D & VR models](vr.md){ .md-button }
+</section>
 
-!!! info "Funding"
-    This project is funded by **{{ project.funder }}** (Executive Agency for Higher Education,
-    Research, Development and Innovation Funding) under
-    **{{ project.programme }}**.
+<div class="stats">
+  <div class="stat"><span class="stat__value">1.64 M</span><span class="stat__label">lei state budget</span></div>
+  <div class="stat"><span class="stat__value">3</span><span class="stat__label">stages · 2025 – 2027</span></div>
+  <div class="stat"><span class="stat__value">4</span><span class="stat__label">research scholarships awarded</span></div>
+  <div class="stat"><span class="stat__value">2</span><span class="stat__label">visualisation labs · fixed &amp; mobile</span></div>
+</div>
 
 ## Project at a glance
 
-<dl class="id-card" markdown>
-  <dt>Project title</dt><dd>{{ project.title }}</dd>
-  <dt>Project number</dt><dd>{{ project.number }}</dd>
-  <dt>Financing contract</dt><dd>{{ project.contract }}</dd>
-  <dt>Call</dt><dd>{{ project.call }}</dd>
-  <dt>Coordinator</dt><dd>{{ project.coordinator.name }} – {{ project.coordinator.unit }}</dd>
-  <dt>Project director</dt><dd>{{ project.director.name }}</dd>
-  <dt>Partners</dt><dd>Single-institution project (no consortium partners). Collaborators are listed on the <a href="project/#collaborators">Project</a> page.</dd>
-  <dt>Duration</dt><dd>{{ project.duration }}</dd>
-  <dt>State budget</dt><dd>{{ project.budget.state }}</dd>
-  <dt>Co-financing</dt><dd>{{ project.budget.cofinancing }}</dd>
-  <dt>Total value</dt><dd>{{ project.budget.total }}</dd>
+<dl class="facts">
+  <div><dt>Project title</dt><dd>{{ project.title }}</dd></div>
+  <div><dt>Project number</dt><dd>{{ project.number }}</dd></div>
+  <div><dt>Financing contract</dt><dd>{{ project.contract }}</dd></div>
+  <div><dt>Funded by</dt><dd>{{ project.funder }} – {{ project.programme }}</dd></div>
+  <div><dt>Coordinator</dt><dd>{{ project.coordinator.name }} – {{ project.coordinator.unit }}</dd></div>
+  <div><dt>Project director</dt><dd>{{ project.director.name }}</dd></div>
+  <div><dt>Partners</dt><dd>Single-institution project. See <a href="project/#collaborators">collaborators</a>.</dd></div>
+  <div><dt>Duration</dt><dd>{{ project.duration }}</dd></div>
+  <div><dt>State budget</dt><dd>{{ project.budget.state }}</dd></div>
+  <div><dt>Co-financing</dt><dd>{{ project.budget.cofinancing }}</dd></div>
+  <div><dt>Total value</dt><dd>{{ project.budget.total }}</dd></div>
 </dl>
 
 ## Explore
 
-- [**Project**](project.md) – objectives, activities, equipment, budget and expected results
-- [**Team**](team.md) – project director and team members
-- [**Reports**](reports.md) – stages, activities and results achieved
-- [**Results & Impact**](results.md) – main results and their scientific and socio-economic impact
-- [**Publications**](publications.md) – up-to-date list of publications
-- [**Events**](events/index.md) – workshops, hackathons, IAB meetings and outreach
-- [**Contact**](contact.md)
+<div class="grid cards" markdown>
+
+-   :material-information-outline:{ .lg } **[About the project](project.md)**
+
+    Objectives, activities, equipment, budget and expected results.
+
+-   :material-account-group-outline:{ .lg } **[Team](team.md)**
+
+    Project director, researchers, scholarship holders and advisory board.
+
+-   :material-file-chart-outline:{ .lg } **[Reports](reports.md)**
+
+    Stages, activities and results achieved, with photos.
+
+-   :material-trophy-outline:{ .lg } **[Results & Impact](results.md)**
+
+    Main results and their scientific and socio-economic impact.
+
+-   :material-book-open-variant-outline:{ .lg } **[Publications](publications.md)**
+
+    Up-to-date list of articles, conference papers and datasets.
+
+-   :material-virtual-reality:{ .lg } **[3D & VR](vr.md)**
+
+    Interactive 3D, VR and AR models of the Danube Delta.
+
+-   :material-calendar-outline:{ .lg } **[Events](events/index.md)**
+
+    Workshops, hackathons, advisory board meetings and outreach.
+
+-   :material-email-outline:{ .lg } **[Contact](contact.md)**
+
+    Get in touch with the project team.
+
+</div>
+
+<div class="funding" markdown>
+**Funding acknowledgement** – This project is funded by the Romanian Executive Agency for Higher
+Education, Research, Development and Innovation Funding (**UEFISCDI**), {{ project.programme }},
+contract no. {{ project.contract }}.
+</div>

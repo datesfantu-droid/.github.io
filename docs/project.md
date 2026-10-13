@@ -1,4 +1,12 @@
+---
+title: About the project
+---
+
+<div class="page-intro" markdown>
+<span class="eyebrow">Project</span>
+
 # About the project
+</div>
 
 ## Context
 

@@ -1,0 +1,33 @@
+# 3D models shown on the "3D & VR" page.
+#
+# To publish a model:
+#   1. Export it as .glb (binary glTF) – keep it under ~20 MB for mobile.
+#   2. Put it in docs/assets/models/ (plus an optional poster image there too).
+#   3. Set `src` to e.g. "assets/models/my-model.glb" (and `poster` likewise). Entries without `src` are shown as "Coming soon".
+#
+# Optional: `ios_src` – a .usdz file for AR Quick Look on iPhone/iPad.
+
+models:
+  - title: Sfântu Gheorghe distributary mouth
+    description: High-resolution bathymetric and topographic model of the river-mouth bar, built from USV and multibeam surveys.
+    tags: [Bathymetry, Topography]
+    src: ""
+    poster: ""
+
+  - title: Danube Delta coastline – digital terrain
+    description: Lidar-derived topography of the delta front, used in the digital-twin framework.
+    tags: [Lidar, Digital twin]
+    src: ""
+    poster: ""
+
+  - title: Hydrodynamic simulation
+    description: Animated currents and sediment transport at the river mouth from numerical models.
+    tags: [Modelling, Animation]
+    src: ""
+    poster: ""
+
+  - title: SCMF Sfântu Gheorghe research station
+    description: Virtual tour of the Marine and Fluvial Research Station, home of the fixed visualisation lab.
+    tags: [360°, Virtual tour]
+    src: ""
+    poster: ""

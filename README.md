@@ -13,6 +13,8 @@ Pages are generated at build time from Markdown – no JavaScript is needed to s
 | Key project facts (title, numbers, budget, director, contact) | `data/project.yml` – single source of truth, used by every page |
 | Pages | `docs/*.md` |
 | Events / news | `docs/events/posts/YYYY-MM-DD-short-title.md` – picked up automatically |
+| 3D / VR / AR models | `data/models.yml` + `.glb` files in `docs/assets/models/` – see comments in the YAML |
+| Home page figures (budget, scholarships…) | `docs/index.md` – update the `stats` block after each report |
 | Photos | `docs/assets/images/` |
 | Logo, styles | `docs/assets/` |
 | Funding banner shown on every page | `overrides/main.html` |

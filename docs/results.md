@@ -1,10 +1,21 @@
+---
+title: Results & Impact
+---
+
+<div class="page-intro" markdown>
+<span class="eyebrow">Progress</span>
+
 # Results & Impact
+</div>
 
 ## Main results
 
 <!-- Update after each report. -->
 
-- TODO: main results obtained to date.
+- **2025:** 4 research scholarships awarded (hydro-sedimentary modelling, hydro-ecological modelling,
+  3D visualisation/VR, climate analysis); project web page launched; mobile component of the
+  visualisation laboratory equipped (USV for bathymetry, drone, 360° camera, VR headsets, laser
+  projector, workstation). See [Reports](reports.md).
 
 ## Scientific (cognitive) impact
 

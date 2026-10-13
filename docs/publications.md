@@ -1,4 +1,12 @@
+---
+title: Publications
+---
+
+<div class="page-intro" markdown>
+<span class="eyebrow">Progress</span>
+
 # Publications
+</div>
 
 Up-to-date list of publications resulting from the project. Newest first.
 
