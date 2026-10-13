@@ -1,0 +1,78 @@
+site_name: DELTA-Hub Support
+site_url: https://dh-suport.unibuc.ro/
+site_description: UEFISCDI-funded support project for consolidating DELTA-Hub at the University of Bucharest.
+copyright: >
+  Funded by UEFISCDI – Premiere Orizont Europa – Instituții ·
+  University of Bucharest
+
+repo_url: https://github.com/datesfantu-droid/.github.io
+edit_uri: edit/main/docs/
+
+theme:
+  name: material
+  custom_dir: overrides
+  logo: assets/logo.svg
+  favicon: assets/logo.svg
+  language: en
+  palette:
+    - media: "(prefers-color-scheme: light)"
+      scheme: default
+      primary: custom
+      accent: custom
+      toggle:
+        icon: material/weather-night
+        name: Switch to dark mode
+    - media: "(prefers-color-scheme: dark)"
+      scheme: slate
+      primary: custom
+      accent: custom
+      toggle:
+        icon: material/weather-sunny
+        name: Switch to light mode
+  features:
+    - navigation.tabs
+    - navigation.top
+    - navigation.footer
+    - content.action.edit
+    - toc.follow
+    - search.highlight
+
+extra_css:
+  - assets/extra.css
+
+nav:
+  - Home: index.md
+  - Project: project.md
+  - Team: team.md
+  - Reports: reports.md
+  - Results & Impact: results.md
+  - Publications: publications.md
+  - Events:
+      - events/index.md
+  - Contact: contact.md
+
+plugins:
+  - search
+  - macros:
+      include_yaml:
+        - data/project.yml
+  - blog:
+      blog_dir: events
+      blog_toc: true
+      post_date_format: long
+      post_url_format: "{date}/{slug}"
+      archive: true
+      categories: true
+
+markdown_extensions:
+  - admonition
+  - attr_list
+  - md_in_html
+  - tables
+  - toc:
+      permalink: true
+  - pymdownx.details
+  - pymdownx.superfences
+  - pymdownx.emoji:
+      emoji_index: !!python/name:material.extensions.emoji.twemoji
+      emoji_generator: !!python/name:material.extensions.emoji.to_svg

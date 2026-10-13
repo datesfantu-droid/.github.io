@@ -1,0 +1,7 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" role="img" aria-label="DELTA-Hub Support logo">
+  <circle cx="32" cy="32" r="30" fill="#0b4f6c"/>
+  <!-- delta channels fanning out to the sea -->
+  <path d="M32 10 L32 30 M32 30 L18 50 M32 30 L26 52 M32 30 L38 52 M32 30 L46 50"
+        stroke="#4cc3b1" stroke-width="3.5" stroke-linecap="round" fill="none"/>
+  <path d="M12 52 Q32 58 52 52" stroke="#ffffff" stroke-width="2.5" fill="none" stroke-linecap="round"/>
+</svg>

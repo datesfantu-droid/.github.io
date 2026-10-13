@@ -1,0 +1,8 @@
+# Build output
+site/
+.cache/
+__pycache__/
+.venv/
+
+# Internal source documents (funding application, reports) – not for publication
+suport/

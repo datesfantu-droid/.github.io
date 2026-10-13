@@ -1,0 +1,46 @@
+# Single source of truth for the project's key facts.
+# Every page reads these values, so update them here only.
+# Items marked TODO must be filled in from the financing contract.
+
+project:
+  acronym: DELTA-Hub Support
+  title: "Support activities for consolidating DELTA-Hub: River Delta Science, Education, and Modeling Hub at the University of Bucharest"
+  number: "TODO: project code (e.g. PN-IV-...)"
+  contract: "118PHE/2025"            # TODO: confirm against the signed contract
+  funder: UEFISCDI
+  funder_url: https://uefiscdi.gov.ro
+  programme: "PNCDI IV, Programme 5 – European and International Cooperation, Subprogramme 5.8 – Premiere Orizont Europa – Instituții"  # TODO: confirm
+  call: "Premiere Orizont Europa – Instituții"
+  start: "2025"                      # TODO: exact start date
+  end: "2027"                        # TODO: exact end date
+  duration: "3 years (2025 – 2027)"
+
+  budget:
+    state: "1,635,600 lei"
+    cofinancing: "TODO lei"          # TODO: co-financing amount (0 lei if none)
+    total: "TODO lei"
+    by_year:
+      - { year: "Year I (2025)",  amount: "724,800 lei" }
+      - { year: "Year II (2026)", amount: "584,400 lei" }
+      - { year: "Year III (2027)", amount: "326,400 lei" }
+
+  coordinator:
+    name: University of Bucharest (UB)
+    unit: Research Institute of the University of Bucharest (ICUB)
+    url: https://unibuc.ro
+
+  director:
+    name: "TODO: Project director name"
+    email: "TODO@unibuc.ro"
+
+  related_project:
+    name: "DELTA-Hub: River Delta Science, Education, and Modeling Hub"
+    programme: Horizon Europe – ERA Chairs
+    start: 1 March 2025
+
+  contact:
+    person: "TODO: contact person"
+    email: "TODO@unibuc.ro"
+    phone: "TODO"
+    fax: "TODO"
+    address: "Research Institute of the University of Bucharest (ICUB), TODO: street address, Bucharest, Romania"
