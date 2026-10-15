@@ -62,7 +62,12 @@
 /* ---------- Header & announcement bar ---------- */
 .md-header, .md-tabs { background: var(--dh-navy); }
 .md-header--shadow { box-shadow: 0 2px 12px rgba(0, 0, 0, 0.15); }
-.md-header__button.md-logo img { height: 1.6rem; }
+/* Wordmark logo: wide image, so give it room and hide the duplicate site name */
+.md-header__button.md-logo { padding: 0.2rem 0.4rem; }
+.md-header__button.md-logo img { height: 1.5rem; width: auto; }
+@media (min-width: 76.25em) {
+  .md-header__title .md-header__topic:first-child { display: none; }
+}
 .md-tabs__link { font-size: 0.72rem; font-weight: 500; opacity: 0.8; }
 .md-tabs__link--active, .md-tabs__link:hover { opacity: 1; }
 
@@ -127,12 +132,15 @@
   content: "";
   position: absolute;
   right: -40px; bottom: -40px;
-  width: 340px; height: 340px;
-  background: url("logo.svg") no-repeat center / contain;
+  width: 420px; height: 240px;
+  background: url("logo-icon.png") no-repeat center / contain;
   opacity: 0.08;
   pointer-events: none;
 }
 .md-typeset .hero h1 { color: #fff; font-size: 2.8em; margin: 0.1em 0 0.3em; }
+.md-typeset .hero__title { display: flex; flex-wrap: wrap; align-items: flex-end; gap: 0.2em 0.45em; margin: 0.5em 0 0.6em; }
+.md-typeset .hero__title img { height: 1.6em; width: auto; max-width: 100%; }
+.md-typeset .hero__title span { font-weight: 300; letter-spacing: 0.02em; line-height: 1; opacity: 0.9; }
 .hero .eyebrow { color: #7fe3d3; }
 .hero__lead { font-size: 1.1em; max-width: 38rem; color: rgba(255, 255, 255, 0.88); margin-bottom: 1.4em; }
 .md-typeset .hero .md-button { color: #fff; border-color: rgba(255, 255, 255, 0.6); }

@@ -8,7 +8,7 @@ hide:
 <section class="hero" markdown>
 <span class="eyebrow">UEFISCDI · Premiere Orizont Europa – Instituții</span>
 
-# {{ project.acronym }}
+<h1 class="hero__title"><img src="assets/Delta-HubWebsite1.png" alt="DELTA-Hub"><span>Support</span></h1>
 
 <p class="hero__lead">Strengthening <strong>DELTA-Hub</strong>, the River Delta Science, Education and
 Modeling Hub of the University of Bucharest, through scholarships, international mobilities,
