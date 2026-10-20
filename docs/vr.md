@@ -15,6 +15,11 @@ animations and virtual tours created by the DELTA-Hub Visualisation and Science 
 Models open directly in the browser – on a computer, a phone (augmented reality) or a VR headset.
 </div>
 
+{% set device_icons = {
+  "computer": "M21 16H3V4h18m0-2H3c-1.11 0-2 .89-2 2v12a2 2 0 0 0 2 2h7v2H8v2h8v-2h-2v-2h7a2 2 0 0 0 2-2V4a2 2 0 0 0-2-2",
+  "phone": "M17 19H7V5h10m0-4H7c-1.11 0-2 .89-2 2v18a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V3a2 2 0 0 0-2-2",
+  "headset": "M20.74 6H3.2C2.55 6 2 6.57 2 7.27v10.46c0 .7.55 1.27 1.23 1.27H8c.54 0 1-.32 1.16-.79l1.39-3.47c.24-.58.8-.99 1.45-.99s1.21.41 1.45.99l1.39 3.47c.19.47.62.79 1.11.79h4.79c.71 0 1.26-.57 1.26-1.27V7.27c0-.7-.55-1.27-1.26-1.27M7.22 14.58C6 14.58 5 13.55 5 12.29 5 11 6 10 7.22 10s2.21 1 2.21 2.29c0 1.26-.99 2.29-2.21 2.29m9.56 0c-1.22 0-2.21-1.03-2.21-2.29S15.56 10 16.78 10 19 11.03 19 12.29s-1 2.29-2.22 2.29"
+} %}
 {% set ready = models | selectattr("src") | list %}
 {% if ready %}
 <script type="module" src="https://unpkg.com/@google/model-viewer@3.5.0/dist/model-viewer.min.js"></script>
@@ -32,6 +37,13 @@ Models open directly in the browser – on a computer, a phone (augmented realit
       <span class="badge badge--done">Live</span>
       <h3>{{ m.title }}</h3>
       <p>{{ m.description }}</p>
+      {% if m.devices %}
+      <ul class="devices" aria-label="Works on">
+        {% for d in m.devices %}
+        <li><svg viewBox="0 0 24 24" aria-hidden="true"><path d="{{ device_icons[d.icon] }}"/></svg><span><strong>{{ d.label }}</strong>{{ d.note }}</span></li>
+        {% endfor %}
+      </ul>
+      {% endif %}
       <div class="tags">{% for t in m.tags %}<span class="tag">{{ t }}</span>{% endfor %}</div>
       <p class="model-card__actions">
         <a class="md-button md-button--primary" href="../{{ m.app }}">Launch the experience</a>
@@ -39,21 +51,14 @@ Models open directly in the browser – on a computer, a phone (augmented realit
       </p>
     </div>
   </article>
-  {% else %}
+  {% elif m.src %}
   <article class="model-card">
-    {% if m.src %}
     {% set base = "" if m.src.startswith("http") else "../" %}
     <model-viewer src="{{ base }}{{ m.src }}"{% if m.ios_src %} ios-src="{{ base }}{{ m.ios_src }}"{% endif %}{% if m.poster %} poster="{{ base }}{{ m.poster }}"{% endif %}
       alt="{{ m.title }}" camera-controls auto-rotate shadow-intensity="1"
       ar ar-modes="webxr scene-viewer quick-look" loading="lazy">
       <button slot="ar-button" class="ar-button">View in your space</button>
     </model-viewer>
-    {% else %}
-    <div class="model-placeholder">
-      <svg class="model-placeholder__icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M17 22v-2h3v-3h2v3.5c0 .39-.16.74-.46 1.04s-.65.46-1.04.46zM7 22H3.5c-.39 0-.74-.16-1.04-.46S2 20.89 2 20.5V17h2v3h3zM17 2h3.5c.39 0 .74.16 1.04.46s.46.65.46 1.04V7h-2V4h-3zM7 2v2H4v3H2V3.5c0-.39.16-.74.46-1.04S3.11 2 3.5 2zm6 15.25 4-2.3v-4.59l-4 2.3zm-1-6.33 4-2.29-4-2.35-4 2.35zm-5 4.03 4 2.3v-4.59l-4-2.3zm11.23-7.36c.5.32.77.75.77 1.32v6.32c0 .57-.27 1-.77 1.32l-5.48 3.18q-.75.48-1.5 0l-5.48-3.18c-.5-.32-.77-.75-.77-1.32V8.91c0-.57.27-1 .77-1.32l5.48-3.18c.25-.13.5-.19.75-.19s.5.06.75.19z"/></svg>
-      <span class="model-placeholder__label">Coming soon</span>
-    </div>
-    {% endif %}
     <div class="model-card__body">
       <h3>{{ m.title }}</h3>
       <p>{{ m.description }}</p>
@@ -64,36 +69,40 @@ Models open directly in the browser – on a computer, a phone (augmented realit
 {% endfor %}
 </div>
 
-## How to view the models
+## How to use it
 
-<div class="grid cards" markdown>
+<p class="howto-hint">Hover over a device (or tap it on a phone or headset) to see the instructions.</p>
 
--   :material-monitor:{ .lg } **Computer**
-
-    ---
-
-    Drag to rotate, scroll to zoom, right-click and drag to pan.
-
--   :material-cellphone:{ .lg } **Phone or tablet – AR**
-
-    ---
-
-    Tap **View in your space** to place the model on your table or floor using augmented reality
-    (Android with ARCore, iPhone/iPad with iOS 12+).
-
--   :material-virtual-reality:{ .lg } **VR headset**
-
-    ---
-
-    Open this page in the headset's browser (e.g. Meta Quest Browser) and choose
-    **View in your space** for an immersive WebXR experience.
-
+<div class="howto">
+{% set howto = [
+  {"icon": "computer", "title": "Computer", "sub": "Chrome, Edge or Firefox",
+   "steps": ["Click <strong>Launch the experience</strong> and wait for the delta to load.",
+             "Press <strong>▶ Începe turul</strong> for the 30-second guided tour, or <strong>Explorează direct</strong> to skip it.",
+             "Drag to rotate, scroll to zoom, right-click and drag to move the map.",
+             "Click anywhere on the delta to read the water level, depth and current speed.",
+             "Open <strong>☰ Meniu</strong> and press <strong>▶ Play</strong> to watch the flood unfold day by day."]},
+  {"icon": "phone", "title": "Phone & tablet", "sub": "Android or iPhone / iPad",
+   "steps": ["Use Wi-Fi if you can – the experience is about 70 MB.",
+             "Start the guided tour, or explore directly.",
+             "Drag with one finger to rotate, pinch to zoom, tap the delta to measure.",
+             "<strong>Android + Chrome:</strong> tap <strong>START AR</strong> and point the camera at a table or the floor to place the delta in your room.",
+             "iPhone and iPad show the 3D view; AR is not available there (Safari does not support WebXR)."]},
+  {"icon": "headset", "title": "Headset", "sub": "Meta Quest – mixed reality",
+   "steps": ["Open this page in the <strong>Quest Browser</strong> and launch the experience.",
+             "Tap <strong>START AR</strong> – the delta appears in your room.",
+             "Pinch or grab to move the map; use two hands to rotate and resize it.",
+             "Point and press the <strong>trigger</strong>, or touch the delta with your finger, to measure the water.",
+             "Press the Meta button to exit."]}
+] %}
+{% for h in howto %}
+  <div class="howto__card" tabindex="0">
+    <div class="howto__head">
+      <svg viewBox="0 0 24 24" aria-hidden="true"><path d="{{ device_icons[h.icon] }}"/></svg>
+      <div><strong>{{ h.title }}</strong><span>{{ h.sub }}</span></div>
+    </div>
+    <ol class="howto__steps">
+      {% for st in h.steps %}<li>{{ st }}</li>{% endfor %}
+    </ol>
+  </div>
+{% endfor %}
 </div>
-
-## Where the data comes from
-
-The models are produced from field data collected with the project's equipment – the uncrewed
-surface vehicle (USV) for shallow-water bathymetry, the multibeam system with IMU-GNSS motion
-correction, drones and 360° cameras – and from DELTA-Hub numerical models. They are presented to
-the public at Open Days, European Researchers' Night and other outreach events using the mobile
-component of the laboratory.
