@@ -6,8 +6,25 @@
 #   3. Set `src` to e.g. "assets/models/my-model.glb" (and `poster` likewise). Entries without `src` are shown as "Coming soon".
 #
 # Optional: `ios_src` – a .usdz file for AR Quick Look on iPhone/iPad.
+#
+# Full web apps (e.g. a three.js/WebXR scene exported as one .html file):
+#   put the .html in docs/xr/ and set `app` instead of `src`. It is shown as a
+#   wide featured card with a launch button. `size` is shown so visitors on
+#   mobile data know what to expect.
 
 models:
+  - title: "Delta vie – the Danube flood of winter 2023–2024"
+    description: >-
+      Watch the Danube Delta flood during the last major Danube flood (November 2023 – February 2024),
+      simulated with the water-flow model developed in DELTA-Hub. Start with a 30-second guided tour
+      from the river's entry into the delta to the sea, then explore on your own: tap the delta to read
+      water level, depth and current speed. Works on computers, phones and VR/AR headsets (WebXR).
+      Interface in Romanian.
+    tags: [WebXR, VR & AR, Flood simulation, Hydrodynamic model]
+    app: xr/delta-vie.html
+    poster: assets/models/delta-vie.jpg
+    size: "≈ 70 MB – best on Wi-Fi"
+
   - title: Sfântu Gheorghe distributary mouth
     description: High-resolution bathymetric and topographic model of the river-mouth bar, built from USV and multibeam surveys.
     tags: [Bathymetry, Topography]
@@ -17,12 +34,6 @@ models:
   - title: Danube Delta coastline – digital terrain
     description: Lidar-derived topography of the delta front, used in the digital-twin framework.
     tags: [Lidar, Digital twin]
-    src: ""
-    poster: ""
-
-  - title: Hydrodynamic simulation
-    description: Animated currents and sediment transport at the river mouth from numerical models.
-    tags: [Modelling, Animation]
     src: ""
     poster: ""
 

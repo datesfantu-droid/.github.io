@@ -329,3 +329,32 @@
 .md-typeset .grid.cards strong { color: var(--md-default-fg-color); }
 /* More, narrower cards per row */
 .md-typeset .grid.cards > ul { grid-template-columns: repeat(auto-fit, minmax(13rem, 1fr)); }
+
+/* Featured WebXR app card on the 3D & VR page */
+.model-card--app {
+  grid-column: 1 / -1;
+  display: grid;
+  grid-template-columns: minmax(0, 1.25fr) minmax(0, 1fr);
+}
+.model-card__media { position: relative; display: block; overflow: hidden; background: #07131f; }
+.model-card__media img { display: block; width: 100%; height: 100%; aspect-ratio: 4 / 3; object-fit: cover; transition: transform 0.3s ease; }
+.model-card__media:hover img { transform: scale(1.03); }
+.model-card__play {
+  position: absolute; left: 50%; top: 50%;
+  width: 4rem; height: 4rem; margin: -2rem 0 0 -2rem;
+  display: flex; align-items: center; justify-content: center;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.92);
+  box-shadow: var(--dh-shadow);
+}
+.model-card__play svg { width: 2rem; height: 2rem; fill: var(--dh-navy); margin-left: 0.2rem; }
+.model-card--app .model-card__body { padding: 1.4rem 1.6rem; align-self: center; }
+.md-typeset .model-card--app h3 { font-size: 1.25rem; margin: 0.6em 0 0.4em; }
+.md-typeset .model-card--app .model-card__body p { font-size: 0.8rem; }
+.md-typeset .model-card__actions { display: flex; flex-wrap: wrap; align-items: center; gap: 0.6rem; margin: 1.1em 0 0; }
+.md-typeset .model-card__actions .md-button { margin: 0; }
+.model-card__size { font-size: 0.7rem; color: var(--md-default-fg-color--light); }
+@media (max-width: 44.9375em) {
+  .model-card--app { grid-template-columns: 1fr; }
+  .model-card--app .model-card__body { padding: 1rem 1.1rem 1.2rem; }
+}

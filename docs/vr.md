@@ -22,6 +22,24 @@ Models open directly in the browser – on a computer, a phone (augmented realit
 
 <div class="model-grid">
 {% for m in models %}
+  {% if m.app %}
+  <article class="model-card model-card--app">
+    <a class="model-card__media" href="../{{ m.app }}">
+      <img src="../{{ m.poster }}" alt="{{ m.title }}" loading="lazy">
+      <span class="model-card__play" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg></span>
+    </a>
+    <div class="model-card__body">
+      <span class="badge badge--done">Live</span>
+      <h3>{{ m.title }}</h3>
+      <p>{{ m.description }}</p>
+      <div class="tags">{% for t in m.tags %}<span class="tag">{{ t }}</span>{% endfor %}</div>
+      <p class="model-card__actions">
+        <a class="md-button md-button--primary" href="../{{ m.app }}">Launch the experience</a>
+        {% if m.size %}<span class="model-card__size">{{ m.size }}</span>{% endif %}
+      </p>
+    </div>
+  </article>
+  {% else %}
   <article class="model-card">
     {% if m.src %}
     {% set base = "" if m.src.startswith("http") else "../" %}
@@ -42,6 +60,7 @@ Models open directly in the browser – on a computer, a phone (augmented realit
       <div class="tags">{% for t in m.tags %}<span class="tag">{{ t }}</span>{% endfor %}</div>
     </div>
   </article>
+  {% endif %}
 {% endfor %}
 </div>
 
