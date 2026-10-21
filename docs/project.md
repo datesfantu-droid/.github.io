@@ -104,5 +104,3 @@ SC Orion Europe SRL (bathymetric and sedimentological surveys, training and cons
 | Travel | 5,000 | 75,000 | 75,000 | 155,000 |
 | Indirect costs | 120,800 | 97,400 | 54,400 | 272,600 |
 | **Total state budget** | **724,800** | **584,400** | **326,400** | **1,635,600** |
-
-**Co-financing:** {{ project.budget.cofinancing }}

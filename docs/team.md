@@ -22,12 +22,12 @@ title: Team
 | Name | Role in the project | Affiliation |
 -->
 
-| Name | Role in the project | Affiliation |
+<!-- Taken from https://delta-hub.unibuc.ro/team.html (DELTA-Hub roles). -->
+
+| Name | Role in DELTA-Hub | Affiliation |
 |---|---|---|
-| TODO | Senior researcher | ICUB, University of Bucharest |
-| TODO | Postdoctoral researcher | ICUB, University of Bucharest |
-| TODO | Postdoctoral researcher | ICUB, University of Bucharest |
-| TODO | Technician – bathymetric surveys | ICUB, University of Bucharest |
+| Florin Zainescu | Junior scientist – delta digitalization | DELTA-Hub, University of Bucharest |
+| Florin Miron | Junior scientist | DELTA-Hub, University of Bucharest |
 
 ## Scholarship holders
 

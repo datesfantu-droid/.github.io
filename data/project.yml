@@ -17,8 +17,6 @@ project:
 
   budget:
     state: "1,635,600 lei"
-    cofinancing: "TODO lei"          # TODO: co-financing amount (0 lei if none)
-    total: "TODO lei"
     by_year:
       - { year: "Year I (2025)",  amount: "724,800 lei" }
       - { year: "Year II (2026)", amount: "584,400 lei" }
@@ -31,16 +29,22 @@ project:
 
   director:
     name: "Ion-Florin Tătui"
-    email: "TODO@unibuc.ro"
+    email: "delta.hub@geo.unibuc.ro"   # general DELTA-Hub address until a personal one is provided
 
   related_project:
     name: "DELTA-Hub: River Delta Science, Education, and Modeling Hub"
     programme: Horizon Europe – ERA Chairs
     start: 1 March 2025
 
+  # Taken from https://delta-hub.unibuc.ro/contact.html. Phone and fax are shown
+  # on the Contact page only when filled in.
   contact:
-    person: "TODO: contact person"
-    email: "TODO@unibuc.ro"
-    phone: "TODO"
-    fax: "TODO"
-    address: "Research Institute of the University of Bucharest (ICUB), TODO: street address, Bucharest, Romania"
+    person: "Ion-Florin Tătui, project director"
+    email: "delta.hub@geo.unibuc.ro"
+    phone: ""                          # TODO
+    fax: ""                            # TODO
+    address: "Research Institute of the University of Bucharest (ICUB), Bucharest, Romania"
+    social:
+      - { name: LinkedIn, icon: linkedin, url: "https://www.linkedin.com/company/delta-hub-river-delta-science-education-and-modeling-hub/" }
+      - { name: Facebook, icon: facebook, url: "https://www.facebook.com/DeltaHubUniBuc/" }
+      - { name: Instagram, icon: instagram, url: "https://www.instagram.com/deltahub2025" }

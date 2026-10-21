@@ -37,8 +37,6 @@ new research equipment and a scientific visualisation laboratory.</p>
   <div><dt>Partners</dt><dd>Single-institution project. See <a href="project/#collaborators">collaborators</a>.</dd></div>
   <div><dt>Duration</dt><dd>{{ project.duration }}</dd></div>
   <div><dt>State budget</dt><dd>{{ project.budget.state }}</dd></div>
-  <div><dt>Co-financing</dt><dd>{{ project.budget.cofinancing }}</dd></div>
-  <div><dt>Total value</dt><dd>{{ project.budget.total }}</dd></div>
 </dl>
 
 ## Explore
