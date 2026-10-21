@@ -19,15 +19,15 @@ title: Team
 ## Research team
 
 <!-- Keep this list up to date (contract art. 6.1.26). Add one row per member:
-| Name | Role in the project | Affiliation |
+| Name | Affiliation |
 -->
 
-<!-- Taken from https://delta-hub.unibuc.ro/team.html (DELTA-Hub roles). -->
+<!-- Taken from https://delta-hub.unibuc.ro/team.html. -->
 
-| Name | Role in DELTA-Hub | Affiliation |
-|---|---|---|
-| Florin Zainescu | Junior scientist – delta digitalization | DELTA-Hub, University of Bucharest |
-| Florin Miron | Junior scientist | DELTA-Hub, University of Bucharest |
+| Name | Affiliation |
+|---|---|
+| Florin Zainescu | DELTA-Hub, University of Bucharest |
+| Florin Miron | DELTA-Hub, University of Bucharest |
 
 ## Scholarship holders
 
